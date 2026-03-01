@@ -107,23 +107,26 @@
 }
 
 .hero-image-wrapper {
+  padding-top: 40%;                /* omjer 5:2 ili 2:1 – prilagodi */
   position: relative;
-  height: 35vh;                    /* ili 40vh na desktopu */
   overflow: hidden;
   text-align: center;
 }
 
 .hero-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;               /* ← promjena ovdje */
-  object-position: center bottom;  /* brod ostaje u donjem dijelu, nebo/more gore */
+  object-fit: contain;
+  object-position: center;
 }
 
-/* Mobitel */
+/* Mobitel – više prostora */
 @media (max-width: 768px) {
   .hero-image-wrapper {
-    height: 50vh;                  /* ili čak 55–60vh za veći dojam */
+    padding-top: 60%;            /* ili 70% za veći brod */
   }
 }
     
