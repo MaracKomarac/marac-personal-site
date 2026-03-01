@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marac Website</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    
+    <style>
+   
+.gradient-background {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+ 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+.skills-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+
+ 
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+  font-family: serif;               /* naglašena plava za naslov */
+}
+
+/* Glavni grid – 3 stupca, automatski redovi */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Svaka kartica */
+.skill-card {
+  padding: 1.8rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: white;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: white;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.skill-card li {
+  margin-bottom: 0.7rem;
+}
+
+.skill-card li strong {
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Ako želiš da NASLOV bude dio grida (opcija B) */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-card {
+    grid-column: 1 / 2;
+  }
+}
+    </style>
+</head>
+
+
+<body>
+<section id="title" class="gradient-background">
+<div class="px-4 pt-5 text-center"> 
+  <h1 class="display-4 mb-4 mt-2 fw-bold text-white" style="font-family: serif;">I'm Marac.⚓</h1> 
+  <div class="col-lg-6 mx-auto"> 
+    <p class="lead mb-2 fw-bold text-white" style="font-family:sans-serif;">I turn ideas into pixel-perfect websites that sail.</p> 
+    </div> 
+    <div class="overflow-hidden" style="max-height: 30vh;"> 
+      <div class="container px-5"> 
+        <img src="./assets/images/1.png" class=" mb-4 px-5 center" alt="Example image" width="500" loading="lazy"> 
+      </div> 
+    </div> 
+  </div>
+</section>
+
+<section>
+<div class="px-4 py-5 text-center"> 
+  <img class="d-block mx-auto mb-4" src="./Logo.jpg" alt="" width="120" height="120"> 
+  <h1 class="display-6 fw-bold text-body-emphasis" style="font-family: serif;">Greetings!</h1> 
+  <div class="col-lg-6 mx-auto"> 
+    <p class="lead mb-4" style="font-family: sans-serif;"> Web Developer & Power BI Analyst<br>
+                          When I'm not coding or visualizing data,<br>
+                          I'm making memories with my family. ❤️ </p> 
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> 
+    </div> 
+  </div> 
+</div>
+</section>
+
+
+<section class="skills-section">
+  <h2>My Skills</h2>
+
+  <div class="skills-grid">
+    <!-- Red 1 – naslov (već iznad grida, ali može biti i unutar) -->
+
+    <div class="skill-card web-dev">
+      <h3>Web Development</h3>
+      <ul>
+        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), React, Next.js</li>
+        <li><strong>Styling:</strong> CSS Modules, Responsive Design</li>
+        <li><strong>Backend:</strong> Node.js, Express, REST APIs</li>
+        <li><strong>Tools:</strong> Git, VS Code</li>
+      </ul>
+    </div>
+
+    <div class="skill-card data-bi">
+      <h3>Data & Business Intelligence</h3>
+      <ul>
+        <li><strong>Power BI:</strong> Advanced DAX, Power Query (M), Data Modeling</li>
+        <li><strong>Data Visualization:</strong> Interactive Dashboards, Custom Themes</li>
+        <li><strong>SQL:</strong> Queries, Joins, Optimization</li>
+        <li><strong>Data Sources:</strong> Excel, SQL Server, APIs, CSV</li>
+      </ul>
+    </div>
+
+    <div class="skill-card soft-other">
+      <h3>Soft & Other</h3>
+      <ul>
+        <li>Pixel-perfect implementation</li>
+        <li>Clean, maintainable code</li>
+        <li>Problem solving & debugging</li>
+        <li>Family time enthusiast ❤️</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section>
+<div class="container text-center px-4 pt-5">
+  <hi class="display-6 fw-bold text-body-emphasis" style="font-family: serif;">Got an idea? Let's make it sail.</hi>
+    <div>
+    <p class="px-4 pt-3 lead" style="font-family: sans-serif;"> Whether it's a stunning website, a powerful dashboard or just a quick chat - Drop me a message!</p>
+      </div>
+      <a href="mailto:adriatico268@gmail.com?subject=⚓%20–%20Project%20Idea" class="btn btn-primary btn-lg">Contact Me</a>
+  </div>
+</section>
+
+<footer class="py-3 mt-4 gradient-background"> 
+ <div class="lead text-white" style="font-family: serif;">
+  <ul class="nav justify-content-center pb-3 mt-2"> 
+    <li class="nav-item"><a href="https://x.com/" class="nav-link px-2 text-white">X</a></li> 
+    <li class="nav-item"><a href="https://www.facebook.com/" class="nav-link px-2 text-white">Facebook</a></li> 
+    <li class="nav-item"><a href="https://www.linkedin.com/" class="nav-link px-2 text-white">Linkedin</a></li>  
+  </ul> 
+    <p class="text-center">© 2026 Marac, Inc</p>
+    </div> 
+</footer>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
+</body>
+</html>
+
