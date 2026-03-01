@@ -105,6 +105,21 @@
     grid-column: 1 / 2;
   }
 }
+
+.hero-image-wrapper {
+  position: relative;
+  height: 30vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-image-wrapper img {
+  max-width: none;             /* dopusti da bude šira od containera */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;         /* ili cover ako želiš da ispuni cijeli prostor */
+  object-position: center;
+}
     </style>
 </head>
 
@@ -117,8 +132,8 @@
     <p class="lead mb-2 fw-bold text-white" style="font-family:sans-serif;">I turn ideas into pixel-perfect websites that sail.</p> 
     </div> 
     <div class="overflow-hidden" style="max-height: 30vh;"> 
-      <div class="container px-5"> 
-        <img src="./assets/images/1.png" class=" mb-4 px-5 center" alt="Example image" width="500" loading="lazy"> 
+      <div class="hero-image-wrapper"> 
+        <img src="./assets/images/1.png" class=" mb-4 px-5" alt="Example image" max-width: 100%  loading="lazy"> 
       </div> 
     </div> 
   </div>
@@ -204,4 +219,3 @@
   integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
 </body>
 </html>
-
